@@ -65,8 +65,8 @@ namespace LocalisedChat
 				return;
 			}
 
-			if (args.Text.StartsWith(TShock.Config.CommandSilentSpecifier)
-				|| args.Text.StartsWith(TShock.Config.CommandSpecifier))
+			if (args.Text.StartsWith(TShock.Config.Settings.CommandSilentSpecifier)
+				|| args.Text.StartsWith(TShock.Config.Settings.CommandSpecifier))
 			{
 				//Do nothing if the text is a command
 				return;
@@ -120,7 +120,7 @@ namespace LocalisedChat
 			}
 
 			//Re-format the text for normal chat
-			text = String.Format(TShock.Config.ChatFormat, p.Group.Name,
+			text = String.Format(TShock.Config.Settings.ChatFormat, p.Group.Name,
 				p.Group.Prefix, p.Name, p.Group.Suffix, args.Text);
 
 			if (config.RadiusInFeet == 0)
