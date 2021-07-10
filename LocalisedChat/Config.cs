@@ -7,7 +7,6 @@ namespace LocalisedChat
 	{
 		public float RadiusInFeet = 100;
 
-
 		public void Write(string path)
 		{
 			using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Write))
